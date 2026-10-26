@@ -1,3 +1,6 @@
+## Realizado por Jhojan Andrés Villada - Juan Pablo Olave 
+
+
 # Formulario de registro
 
 Formulario de registro hecho con HTML, CSS y JavaScript, sin librerías ni frameworks. Incluye validación de los siete campos, mensajes de error accesibles, envío con `fetch`, comprobación asíncrona del correo y teléfonos dinámicos.
