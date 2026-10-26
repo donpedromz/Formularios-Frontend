@@ -3,42 +3,70 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Registro</title>
-    <link rel="stylesheet" href="estilos.css" />
+    <title>Formulario de registro</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="registro/estilos.css" />
+    <style>
+      .intro {
+        margin: 0 0 1.5rem;
+        color: var(--texto-suave);
+      }
+
+      .opciones {
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .opciones a {
+        display: block;
+        padding: 0.9rem 1rem;
+        color: var(--texto);
+        text-decoration: none;
+        border: 1px solid var(--borde);
+        border-radius: var(--radio);
+        font-weight: 600;
+      }
+
+      .opciones a:hover {
+        border-color: var(--primario);
+        background: #f5f8ff;
+      }
+
+      .opciones a:focus-visible {
+        outline: 3px solid var(--primario);
+        outline-offset: 2px;
+      }
+
+      .opciones span {
+        display: block;
+        margin-top: 0.2rem;
+        color: var(--texto-suave);
+        font-size: 0.9rem;
+        font-weight: 400;
+      }
+    </style>
   </head>
   <body>
-    <form
-      id="registro"
-      action="https://jsonplaceholder.typicode.com/posts"
-      method="post"
-      novalidate
-    >
-      <label for="nombre">Nombre completo</label>
-      <input
-        id="nombre"
-        name="nombre"
-        type="text"
-        required
-        minlength="3"
-        maxlength="60"
-        autocomplete="name"
-      />
-      <label for="email">Correo</label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-        required
-        autocomplete="email"
-      />
-      <!-- TODO: password con minlength="8" y pattern (letra + número) -->
-      <!-- TODO: confirmar contraseña -->
-      <!-- TODO: edad: type="number", min, max, step="1" -->
-      <!-- TODO: país: <select required> con una primera opción vacía value="" -->
-      <!-- TODO: términos: checkbox required -->
-      <button type="submit">Crear cuenta</button>
-      <p id="mensaje" role="status"></p>
-    </form>
-    <script src="app.js"></script>
+    <main class="contenedor">
+      <h1>Formulario de registro</h1>
+      <p class="intro">Elige una de las dos versiones.</p>
+
+      <nav class="opciones">
+        <a href="registro/">
+          Versión completa
+          <span
+            >Validación con JavaScript, mensajes de error, envío con fetch y
+            teléfonos dinámicos.</span
+          >
+        </a>
+        <a href="nativo/">
+          Validación del navegador
+          <span
+            >La misma base del formulario validada solo con atributos
+            HTML.</span
+          >
+        </a>
+      </nav>
+    </main>
   </body>
 </html>
